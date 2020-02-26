@@ -1,5 +1,6 @@
 from url import url
 import json
+import csv
 
 def main():
         print(web_crawling.crawling_1(web_crawling))
@@ -28,8 +29,13 @@ class web_crawling:
 
             p = 0
             listaok = []
+
+            arq_csv = open('web_crawling_1.csv', 'w')
+            writer = csv.writer(arq_csv)
+            writer.writerow(('cpu', 'memory', 'storage', 'bandwidth', 'price'))
             print("cpu", "memory", "storage", "bandwidth", "price")
             for m in memory:
+                writer.writerow((cpu[p], m, storage[p], bandwidth[p], price[p]))
                 print(cpu[p], m, storage[p], bandwidth[p], price[p])
                 lista = {
                     "cpu": cpu[p],
@@ -40,6 +46,7 @@ class web_crawling:
                 }
                 p += 1
                 listaok.append(lista)
+            arq_csv.close()
             arq = open('web_crawling_1.json', 'w')
             json.dump(listaok, arq)
             arq.close()            
