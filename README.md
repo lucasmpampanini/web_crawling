@@ -12,8 +12,8 @@ Neste exemplo o spider raspa dados da pagina 1 e 2 sanvando em csv e json.
 
 ##### Para utilizar este exemplo: 
 1.  git clone  https://github.com/lucasmpampanini/web_crawling_python.git
-2. abra shell e na pasta do projeto rode 
-	 $ python3 crawler.py crawling_1 imprime 
+2. abra shell e na pasta do projeto rode:
+	 $ python3 crawler.py crawling_1 imprime
 	 $ python3 crawler.py crawling_1  save_json
 	 $ python3 crawler.py crawling_1  save_csv
 	 * faça o mesmo para o crawling_2
